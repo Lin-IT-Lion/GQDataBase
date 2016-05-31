@@ -104,17 +104,17 @@ NSString *const classNormalModelName = @"Model";
     for (int i = 0 ;i < mutableList.count ; i ++) {
         NSObject *object = mutableList[i];
         if ([object isKindOfClass:[NSMutableArray class]] || [object isKindOfClass:[NSArray class]] ) {
-            [mutableList addObjectsFromArray:object];
+            [mutableList addObjectsFromArray:(NSArray *)object];
             [mutableList removeObject:object];
             i--;
         } else {
             GQBaseDBModel *model = [self transformerDBModelWithNormalModel:object];
-            NSMutableArray *modelList = dic[model.class];
+            NSMutableArray *modelList = dic[NSStringFromClass(model.class)];
             if (modelList == nil) {
                 modelList = [NSMutableArray array];
             }
             [modelList addObject:model];
-            dic[model.class] = modelList;
+            dic[NSStringFromClass(model.class)] = modelList;
         }
     }
     for (NSArray *modelList in [dic allValues]) {

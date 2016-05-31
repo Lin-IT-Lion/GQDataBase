@@ -47,7 +47,7 @@ static NSMutableDictionary *dicForClass;
         dicForClass = [NSMutableDictionary dictionary];
     }
     if (([key isEqualToString:gq_DBModelBaseClassName] == NO) && ([table containsObject:key] == NO)) {
-        GQBaseDBModel *dbModel = [self createRealm:classDBName];
+        [self createRealm:classDBName];
         RLMObjectSchema *schema = [self sharedSchema];
         NSMutableDictionary *dic = [NSMutableDictionary dictionary];
         for (RLMProperty *property in schema.properties) {

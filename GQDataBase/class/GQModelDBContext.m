@@ -127,7 +127,10 @@ NSString *const gq_DBglobalString = @"global";
         realm = [RLMRealm realmWithConfiguration:configuration error:&e];
     }
     @catch (NSException *exception) {
-        [GQBaseDBModel.gq_DBsettingReader gq_DBHandleError:exception];
+        NSError *e = [NSError errorWithDomain:RLMErrorDomain
+                                         code:0
+                                     userInfo:@{NSLocalizedDescriptionKey: exception.reason}];
+        [GQBaseDBModel.gq_DBsettingReader gq_DBHandleError:e];
     }
     if (!realm) {
         [[NSFileManager defaultManager] removeItemAtPath:[self gq_DBcurrentRealmPath:dbModelClassName] error:nil];
