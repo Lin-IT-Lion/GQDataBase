@@ -1,0 +1,9 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, ‘7.0’
+
+target 'GQDataBaseDemo' do
+pod 'GQDataBase', :path => '../'
+end
+target 'GQDataBaseDemoTests' do
+
+end

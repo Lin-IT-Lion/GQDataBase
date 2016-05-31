@@ -1,0 +1,32 @@
+{
+  "name": "GQDataBase",
+  "version": "1.0.0",
+  "summary": "formtable For Lin_IT",
+  "description": "Quickly generate forms and provide verification",
+  "license": "lgq",
+  "authors": {
+    "GuoQiang Lin": "lin_it@outlook.com"
+  },
+  "source": {
+    "git": "https://github.com/Lin-IT-Lion/GQDataBase.git",
+    "tag": "0.0.1"
+  },
+  "homepage": "https://github.com/Lin-IT-Lion",
+  "source_files": "GQDataBase/**/*.{h,m}",
+  "ios": {
+    "dependencies": {
+      "Realm+JSON": [
+
+      ],
+      "Realm": [
+
+      ],
+      "MJExtension": [
+
+      ],
+      "FMDB": [
+
+      ]
+    }
+  }
+}
