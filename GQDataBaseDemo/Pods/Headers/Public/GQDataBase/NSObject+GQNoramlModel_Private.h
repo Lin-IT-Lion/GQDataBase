@@ -1,1 +1,0 @@
-../../../../../GQDataBase/private_header/NSObject+GQNoramlModel_Private.h

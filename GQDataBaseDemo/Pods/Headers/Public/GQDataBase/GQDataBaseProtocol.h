@@ -1,1 +1,0 @@
-../../../../../GQDataBase/public_header/GQDataBaseProtocol.h
