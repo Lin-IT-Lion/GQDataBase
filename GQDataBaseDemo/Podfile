@@ -3,6 +3,7 @@
 
 target 'GQDataBaseDemo' do
 pod 'GQDataBase', :path => '../'
+pod ‘FMDB’
 end
 target 'GQDataBaseDemoTests' do
 
