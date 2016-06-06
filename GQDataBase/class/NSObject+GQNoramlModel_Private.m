@@ -13,7 +13,7 @@
 {
     Class DBModelClassName = [GQModelTransformer gq_DBClassName:self];
     if ([DBModelClassName respondsToSelector:@selector(modelClassInArray)]) {
-        NSDictionary *dic = [DBModelClassName modelClassInArray];
+        NSDictionary *dic = (NSDictionary *)[DBModelClassName modelClassInArray];
         return dic;
     }
     return nil;
