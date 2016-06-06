@@ -16,9 +16,9 @@ Pod::Spec.new do |s|
   s.ios.dependency 'MJExtension'
   #s.ios.dependency 'FMDB'
   s.platform     = :ios, "7.0"
-  s.license          = "Copyright (c) 2016年 lgq. All rights reserved."
+  #s.license          = "Copyright (c) 2016年 lgq. All rights reserved."
 
   #s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 end

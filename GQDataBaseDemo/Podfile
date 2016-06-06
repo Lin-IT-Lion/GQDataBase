@@ -2,7 +2,7 @@
 # platform :ios, ‘7.0’
 
 target 'GQDataBaseDemo' do
-pod 'GQDataBase', :path => '../'
+pod 'GQDataBase'
 pod ‘FMDB’
 end
 target 'GQDataBaseDemoTests' do
