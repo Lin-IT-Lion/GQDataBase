@@ -121,7 +121,9 @@ NSString *const gq_DBglobalString = @"global";
     @try {
         NSString *path = [self gq_DBcurrentRealmPath:dbModelClassName];
         RLMRealmConfiguration *configuration = [RLMRealmConfiguration defaultConfiguration];
-        configuration.path = path;
+        if ([configuration respondsToSelector:@selector(setPath:)]) {
+             configuration.path = path;
+        }
         configuration.encryptionKey = [self gq_DBrealmKey];
         NSError *e = nil;
         realm = [RLMRealm realmWithConfiguration:configuration error:&e];
